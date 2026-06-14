@@ -1,0 +1,232 @@
+<!doctype html>
+<html lang="en">
+<head>
+  <meta charset="utf-8" />
+  <meta name="viewport" content="width=device-width, initial-scale=1" />
+  <title>Privacy Policy — Aretay</title>
+  <link rel="icon" href="icon.png" type="image/png" />
+  <link rel="preconnect" href="https://fonts.googleapis.com" />
+  <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin />
+  <link href="https://fonts.googleapis.com/css2?family=Montserrat:wght@300;400;500&display=swap" rel="stylesheet" />
+  <style>
+    :root {
+      --bg: #0b0d10;
+      --panel: #14181d;
+      --border: #232a32;
+      --text: #e8edf2;
+      --muted: #8a95a3;
+      --accent: #6ea8ff;
+    }
+    *, *::before, *::after { box-sizing: border-box; margin: 0; padding: 0; }
+    body {
+      font-family: 'Montserrat', 'Helvetica Neue', sans-serif;
+      background: var(--bg);
+      color: var(--text);
+      min-height: 100vh;
+      display: flex;
+      flex-direction: column;
+      line-height: 1.6;
+    }
+    header {
+      border-bottom: 1px solid var(--border);
+      padding: 20px 24px;
+      display: flex;
+      align-items: center;
+      gap: 20px;
+    }
+    header a {
+      color: var(--muted);
+      text-decoration: none;
+      font-size: 13px;
+      font-weight: 300;
+      letter-spacing: 0.02em;
+      transition: color 0.12s;
+    }
+    header a:hover { color: var(--text); }
+    header .site-name {
+      font-size: 15px;
+      font-weight: 500;
+      letter-spacing: 0.3em;
+      color: var(--text);
+      text-transform: lowercase;
+      text-decoration: none;
+    }
+    header .site-name:hover { color: var(--text); }
+    .spacer { flex: 1; }
+
+    .content {
+      flex: 1;
+      max-width: 720px;
+      margin: 0 auto;
+      padding: 56px 24px 80px;
+      width: 100%;
+    }
+    h1 {
+      font-size: clamp(24px, 4vw, 32px);
+      font-weight: 500;
+      margin-bottom: 8px;
+      letter-spacing: -0.01em;
+    }
+    .effective {
+      font-size: 13px;
+      color: var(--muted);
+      font-weight: 300;
+      margin-bottom: 48px;
+    }
+    h2 {
+      font-size: 14px;
+      font-weight: 500;
+      text-transform: uppercase;
+      letter-spacing: 0.07em;
+      color: var(--muted);
+      margin: 40px 0 12px;
+    }
+    h2:first-of-type { margin-top: 0; }
+    p {
+      font-size: 15px;
+      font-weight: 300;
+      color: var(--text);
+      margin-bottom: 16px;
+    }
+    p:last-child { margin-bottom: 0; }
+    ul {
+      list-style: none;
+      margin-bottom: 16px;
+    }
+    ul li {
+      font-size: 15px;
+      font-weight: 300;
+      color: var(--text);
+      padding: 5px 0 5px 20px;
+      position: relative;
+    }
+    ul li::before {
+      content: '—';
+      position: absolute;
+      left: 0;
+      color: var(--muted);
+    }
+    a { color: var(--accent); text-decoration: none; }
+    a:hover { text-decoration: underline; }
+    .divider {
+      border: none;
+      border-top: 1px solid var(--border);
+      margin: 0;
+    }
+    .contact-box {
+      background: var(--panel);
+      border: 1px solid var(--border);
+      border-radius: 8px;
+      padding: 20px 24px;
+      margin-top: 12px;
+    }
+    .contact-box p { margin: 0; }
+
+    footer {
+      border-top: 1px solid var(--border);
+      padding: 24px;
+      display: flex;
+      flex-wrap: wrap;
+      align-items: center;
+      justify-content: center;
+      gap: 8px 24px;
+      font-size: 13px;
+      color: var(--muted);
+      font-weight: 300;
+    }
+    footer a { color: var(--muted); text-decoration: none; transition: color 0.12s; }
+    footer a:hover { color: var(--text); }
+    .footer-sep { opacity: 0.3; }
+  </style>
+</head>
+<body>
+  <header>
+    <a href="index.html" class="site-name">aretay</a>
+    <span class="spacer"></span>
+    <a href="support.html">Support</a>
+  </header>
+
+  <div class="content">
+    <h1>Privacy Policy</h1>
+    <p class="effective">Effective June 2026</p>
+
+    <hr class="divider" />
+
+    <h2>Overview</h2>
+    <p>Aretay ("we", "our", "the app") is an iOS learning app. We collect only what is necessary to provide the spaced repetition learning experience. We do not sell your data, run advertising, or use third-party analytics SDKs.</p>
+
+    <h2>What We Collect</h2>
+
+    <p><strong>Account information</strong> (via Sign in with Apple):</p>
+    <ul>
+      <li>Your Apple ID email address (may be a private relay address if you choose)</li>
+      <li>Your first name, if you share it during sign-in</li>
+    </ul>
+
+    <p><strong>Learning data</strong>, stored on our servers so your progress syncs across reinstalls:</p>
+    <ul>
+      <li>Which courses you are enrolled in and how far you have progressed</li>
+      <li>Your FSRS memory state per card: due date, stability, difficulty, review count, lapse count</li>
+      <li>Review log entries: which answer you chose, whether it was correct, how long you took, and the before/after memory state</li>
+      <li>Your day streak, aggregate retention rate, and learner level (derived from the above)</li>
+    </ul>
+
+    <p><strong>Technical identifiers</strong>:</p>
+    <ul>
+      <li>A random user ID (UUID) created by our authentication system and linked to your Apple ID</li>
+    </ul>
+
+    <p><strong>What we do not collect</strong>:</p>
+    <ul>
+      <li>Device advertising identifiers</li>
+      <li>Location data</li>
+      <li>Camera, microphone, or photo library access</li>
+      <li>Contacts</li>
+      <li>Any third-party analytics, crash-reporting, or advertising SDK data</li>
+    </ul>
+
+    <h2>How We Use Your Data</h2>
+    <p>We use your data solely to operate the learning service:</p>
+    <ul>
+      <li>Authenticate you and maintain your session</li>
+      <li>Sync your progress, scheduling state, and stats across devices and reinstalls</li>
+      <li>Schedule which cards are due for review using the FSRS algorithm on your device</li>
+    </ul>
+    <p>We do not use your data for advertising, profiling, or any purpose beyond operating the app.</p>
+
+    <h2>Data Storage and Security</h2>
+    <p>Your account and learning data are stored in <a href="https://supabase.com" target="_blank" rel="noopener">Supabase</a> (hosted on AWS), protected by Row Level Security — every database query is scoped to your user ID. Course videos and media are served from <a href="https://www.cloudflare.com/products/r2/" target="_blank" rel="noopener">Cloudflare R2</a>; Cloudflare may log IP addresses as part of standard CDN operation.</p>
+    <p>All data is transmitted over HTTPS.</p>
+
+    <h2>Data Retention</h2>
+    <p>Your data is retained for as long as your account is active. Deleting your account removes all associated learning data (enrollments, card states, review history) permanently and immediately.</p>
+
+    <h2>Your Rights</h2>
+    <ul>
+      <li><strong>Access</strong> — you can see your stats and progress inside the app at any time</li>
+      <li><strong>Deletion</strong> — you can delete your account from the app: open your Profile, tap <em>Delete Account</em>, and confirm. This is immediate and cannot be undone.</li>
+      <li><strong>Data portability / correction</strong> — contact us at the address below</li>
+    </ul>
+
+    <h2>Children</h2>
+    <p>Aretay is not directed at children under 13. We do not knowingly collect personal information from anyone under 13. If you believe a child under 13 has created an account, please contact us and we will delete it promptly.</p>
+
+    <h2>Changes to This Policy</h2>
+    <p>We may update this policy as the app evolves. Material changes will be noted in the app or at this URL. The effective date above reflects the most recent update.</p>
+
+    <h2>Contact</h2>
+    <div class="contact-box">
+      <!-- Replace with a real monitored address -->
+      <p>Questions about your privacy or data: <a href="mailto:support@aretay.com">support@aretay.com</a></p>
+    </div>
+  </div>
+
+  <footer>
+    <span>© 2026 Aretay</span>
+    <span class="footer-sep">·</span>
+    <a href="index.html">Home</a>
+    <span class="footer-sep">·</span>
+    <a href="support.html">Support</a>
+  </footer>
+</body>
+</html>

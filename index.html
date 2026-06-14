@@ -1,0 +1,208 @@
+<!doctype html>
+<html lang="en">
+<head>
+  <meta charset="utf-8" />
+  <meta name="viewport" content="width=device-width, initial-scale=1" />
+  <title>Aretay — Learn Anything. Become Extraordinary.</title>
+  <meta name="description" content="Aretay teaches you anything through short videos and spaced repetition. Build knowledge that actually sticks." />
+  <meta property="og:title" content="Aretay" />
+  <meta property="og:description" content="Learn anything. Become extraordinary." />
+  <meta property="og:type" content="website" />
+  <link rel="icon" href="icon.png" type="image/png" />
+  <link rel="preconnect" href="https://fonts.googleapis.com" />
+  <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin />
+  <link href="https://fonts.googleapis.com/css2?family=Libre+Caslon+Text:ital@1&family=Montserrat:wght@300;500&display=swap" rel="stylesheet" />
+  <style>
+    :root {
+      --bg: #0b0d10;
+      --panel: #14181d;
+      --border: #232a32;
+      --text: #e8edf2;
+      --muted: #8a95a3;
+      --accent: #6ea8ff;
+      --mark: #CDD5EC;
+      --line1: #F5F2EA;
+      --line2: #F0D9A8;
+      --shadow-color: #0A0C1E;
+    }
+    *, *::before, *::after { box-sizing: border-box; margin: 0; padding: 0; }
+    html { scroll-behavior: smooth; }
+    body {
+      font-family: 'Montserrat', 'Helvetica Neue', sans-serif;
+      background: var(--bg);
+      color: var(--text);
+      min-height: 100vh;
+      display: flex;
+      flex-direction: column;
+    }
+
+    /* ── hero ── */
+    .hero {
+      flex: 1;
+      display: flex;
+      flex-direction: column;
+      align-items: center;
+      justify-content: center;
+      text-align: center;
+      padding: 80px 24px 60px;
+      position: relative;
+      overflow: hidden;
+    }
+    .hero::before {
+      content: '';
+      position: absolute;
+      inset: 0;
+      background:
+        radial-gradient(ellipse 60% 50% at 50% 0%, rgba(110,168,255,0.08) 0%, transparent 70%),
+        radial-gradient(ellipse 40% 30% at 80% 80%, rgba(240,217,168,0.05) 0%, transparent 60%);
+      pointer-events: none;
+    }
+
+    /* ── brand lockup ── */
+    .lockup {
+      position: relative;
+      margin-bottom: 48px;
+    }
+    .lockup .mark {
+      font-family: 'Montserrat', sans-serif;
+      font-weight: 300;
+      font-size: clamp(13px, 2.2vw, 18px);
+      letter-spacing: 0.45em;
+      color: var(--mark);
+      text-shadow: 0 0 12px rgba(10,12,30,0.78);
+      display: block;
+      margin-bottom: clamp(18px, 3vw, 26px);
+      text-transform: lowercase;
+    }
+    .lockup .line1 {
+      font-family: 'Libre Caslon Text', Georgia, serif;
+      font-style: italic;
+      font-size: clamp(36px, 7vw, 72px);
+      color: var(--line1);
+      text-shadow: 0 0 20px rgba(10,12,30,0.78);
+      display: block;
+      line-height: 1.1;
+      margin-bottom: clamp(14px, 2.5vw, 22px);
+    }
+    .lockup .line2 {
+      font-family: 'Montserrat', sans-serif;
+      font-weight: 500;
+      font-size: clamp(16px, 3vw, 30px);
+      letter-spacing: 0.34em;
+      color: var(--line2);
+      text-shadow: 0 0 14px rgba(10,12,30,0.78);
+      display: block;
+      text-transform: uppercase;
+    }
+
+    /* ── sub-headline ── */
+    .hero p {
+      font-size: clamp(15px, 2vw, 18px);
+      color: var(--muted);
+      max-width: 520px;
+      line-height: 1.65;
+      margin-bottom: 40px;
+      font-weight: 300;
+    }
+
+    /* ── App Store button ── */
+    .store-btn {
+      display: inline-flex;
+      align-items: center;
+      gap: 14px;
+      background: var(--text);
+      color: var(--bg);
+      text-decoration: none;
+      padding: 14px 28px;
+      border-radius: 14px;
+      font-weight: 500;
+      font-size: 15px;
+      letter-spacing: 0.01em;
+      transition: opacity 0.15s, transform 0.15s;
+      margin-bottom: 56px;
+    }
+    .store-btn:hover { opacity: 0.88; transform: translateY(-1px); }
+    .store-btn svg { flex-shrink: 0; }
+    .store-btn .store-label { display: flex; flex-direction: column; align-items: flex-start; }
+    .store-btn .store-label span:first-child { font-size: 11px; font-weight: 300; letter-spacing: 0.03em; opacity: 0.7; line-height: 1; }
+    .store-btn .store-label span:last-child { font-size: 17px; font-weight: 600; line-height: 1.2; }
+
+    /* ── feature pills ── */
+    .features {
+      display: flex;
+      flex-wrap: wrap;
+      gap: 10px;
+      justify-content: center;
+      max-width: 560px;
+    }
+    .feature {
+      font-size: 13px;
+      font-weight: 300;
+      padding: 6px 14px;
+      border-radius: 20px;
+      border: 1px solid var(--border);
+      color: var(--muted);
+      letter-spacing: 0.02em;
+    }
+
+    /* ── footer ── */
+    footer {
+      border-top: 1px solid var(--border);
+      padding: 24px;
+      display: flex;
+      flex-wrap: wrap;
+      align-items: center;
+      justify-content: center;
+      gap: 8px 24px;
+      font-size: 13px;
+      color: var(--muted);
+      font-weight: 300;
+    }
+    footer a {
+      color: var(--muted);
+      text-decoration: none;
+      transition: color 0.12s;
+    }
+    footer a:hover { color: var(--text); }
+    .footer-sep { opacity: 0.3; }
+  </style>
+</head>
+<body>
+  <main class="hero">
+    <div class="lockup">
+      <span class="mark">aretay</span>
+      <span class="line1">Learn Anything.</span>
+      <span class="line2">Become Extraordinary</span>
+    </div>
+
+    <p>Short video lessons and spaced repetition — together. Build real, lasting knowledge one session at a time.</p>
+
+    <!-- Replace href with your real App Store URL once live -->
+    <a class="store-btn" href="https://apps.apple.com/app/aretay/id000000000" target="_blank" rel="noopener">
+      <svg width="24" height="28" viewBox="0 0 24 28" fill="currentColor" aria-hidden="true">
+        <path d="M17.05 14.98c-.03-3.27 2.67-4.84 2.79-4.92-1.52-2.22-3.88-2.52-4.72-2.56-2-.2-3.93 1.18-4.95 1.18-1.03 0-2.6-1.16-4.28-1.12C3.6 7.6 1.46 8.91.36 10.96c-2.24 3.9-.57 9.66 1.58 12.83 1.08 1.55 2.34 3.28 4 3.22 1.62-.07 2.22-1.04 4.17-1.04 1.94 0 2.49 1.04 4.19 1 1.74-.03 2.82-1.56 3.87-3.12 1.24-1.77 1.74-3.52 1.76-3.61-.04-.01-3.36-1.29-3.38-5.26zM13.87 4.96c.88-1.08 1.48-2.57 1.32-4.06-1.27.06-2.83.86-3.74 1.91-.81.93-1.53 2.44-1.34 3.88 1.41.11 2.86-.72 3.76-1.73z"/>
+      </svg>
+      <div class="store-label">
+        <span>Download on the</span>
+        <span>App Store</span>
+      </div>
+    </a>
+
+    <div class="features">
+      <span class="feature">TikTok-style video lessons</span>
+      <span class="feature">Spaced repetition (FSRS)</span>
+      <span class="feature">Sign in with Apple</span>
+      <span class="feature">No ads · No tracking</span>
+      <span class="feature">iOS 17+</span>
+    </div>
+  </main>
+
+  <footer>
+    <span>© 2026 Aretay</span>
+    <span class="footer-sep">·</span>
+    <a href="privacy.html">Privacy Policy</a>
+    <span class="footer-sep">·</span>
+    <a href="support.html">Support</a>
+  </footer>
+</body>
+</html>

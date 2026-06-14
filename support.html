@@ -1,0 +1,270 @@
+<!doctype html>
+<html lang="en">
+<head>
+  <meta charset="utf-8" />
+  <meta name="viewport" content="width=device-width, initial-scale=1" />
+  <title>Support — Aretay</title>
+  <link rel="icon" href="icon.png" type="image/png" />
+  <link rel="preconnect" href="https://fonts.googleapis.com" />
+  <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin />
+  <link href="https://fonts.googleapis.com/css2?family=Montserrat:wght@300;400;500&display=swap" rel="stylesheet" />
+  <style>
+    :root {
+      --bg: #0b0d10;
+      --panel: #14181d;
+      --border: #232a32;
+      --text: #e8edf2;
+      --muted: #8a95a3;
+      --accent: #6ea8ff;
+      --success: #6fcf97;
+    }
+    *, *::before, *::after { box-sizing: border-box; margin: 0; padding: 0; }
+    body {
+      font-family: 'Montserrat', 'Helvetica Neue', sans-serif;
+      background: var(--bg);
+      color: var(--text);
+      min-height: 100vh;
+      display: flex;
+      flex-direction: column;
+      line-height: 1.6;
+    }
+    header {
+      border-bottom: 1px solid var(--border);
+      padding: 20px 24px;
+      display: flex;
+      align-items: center;
+      gap: 20px;
+    }
+    header a {
+      color: var(--muted);
+      text-decoration: none;
+      font-size: 13px;
+      font-weight: 300;
+      letter-spacing: 0.02em;
+      transition: color 0.12s;
+    }
+    header a:hover { color: var(--text); }
+    header .site-name {
+      font-size: 15px;
+      font-weight: 500;
+      letter-spacing: 0.3em;
+      color: var(--text);
+      text-transform: lowercase;
+      text-decoration: none;
+    }
+    .spacer { flex: 1; }
+
+    .content {
+      flex: 1;
+      max-width: 720px;
+      margin: 0 auto;
+      padding: 56px 24px 80px;
+      width: 100%;
+    }
+    h1 {
+      font-size: clamp(24px, 4vw, 32px);
+      font-weight: 500;
+      margin-bottom: 8px;
+      letter-spacing: -0.01em;
+    }
+    .subtitle {
+      font-size: 15px;
+      color: var(--muted);
+      font-weight: 300;
+      margin-bottom: 48px;
+    }
+    h2 {
+      font-size: 14px;
+      font-weight: 500;
+      text-transform: uppercase;
+      letter-spacing: 0.07em;
+      color: var(--muted);
+      margin: 44px 0 16px;
+    }
+    h2:first-of-type { margin-top: 0; }
+
+    /* ── contact card ── */
+    .contact-card {
+      background: var(--panel);
+      border: 1px solid var(--border);
+      border-radius: 10px;
+      padding: 24px 28px;
+      display: flex;
+      flex-direction: column;
+      gap: 6px;
+    }
+    .contact-card .label {
+      font-size: 12px;
+      font-weight: 500;
+      text-transform: uppercase;
+      letter-spacing: 0.08em;
+      color: var(--muted);
+    }
+    .contact-card a {
+      font-size: 18px;
+      font-weight: 500;
+      color: var(--accent);
+      text-decoration: none;
+      word-break: break-all;
+    }
+    .contact-card a:hover { text-decoration: underline; }
+    .contact-card .note {
+      font-size: 13px;
+      font-weight: 300;
+      color: var(--muted);
+      margin-top: 4px;
+    }
+
+    /* ── FAQ ── */
+    .faq { display: flex; flex-direction: column; gap: 2px; }
+    details {
+      background: var(--panel);
+      border: 1px solid var(--border);
+      border-radius: 8px;
+      overflow: hidden;
+    }
+    summary {
+      list-style: none;
+      padding: 16px 20px;
+      font-size: 15px;
+      font-weight: 400;
+      cursor: pointer;
+      display: flex;
+      align-items: center;
+      justify-content: space-between;
+      gap: 12px;
+      user-select: none;
+    }
+    summary::-webkit-details-marker { display: none; }
+    summary::after {
+      content: '+';
+      font-size: 18px;
+      font-weight: 300;
+      color: var(--muted);
+      flex-shrink: 0;
+      transition: transform 0.2s;
+    }
+    details[open] summary::after { content: '−'; }
+    .faq-body {
+      padding: 0 20px 16px;
+      font-size: 14px;
+      font-weight: 300;
+      color: var(--muted);
+      line-height: 1.65;
+    }
+    .faq-body a { color: var(--accent); text-decoration: none; }
+    .faq-body a:hover { text-decoration: underline; }
+    .faq-body p + p { margin-top: 10px; }
+
+    a { color: var(--accent); text-decoration: none; }
+    a:hover { text-decoration: underline; }
+
+    footer {
+      border-top: 1px solid var(--border);
+      padding: 24px;
+      display: flex;
+      flex-wrap: wrap;
+      align-items: center;
+      justify-content: center;
+      gap: 8px 24px;
+      font-size: 13px;
+      color: var(--muted);
+      font-weight: 300;
+    }
+    footer a { color: var(--muted); text-decoration: none; transition: color 0.12s; }
+    footer a:hover { color: var(--text); }
+    .footer-sep { opacity: 0.3; }
+  </style>
+</head>
+<body>
+  <header>
+    <a href="index.html" class="site-name">aretay</a>
+    <span class="spacer"></span>
+    <a href="privacy.html">Privacy</a>
+  </header>
+
+  <div class="content">
+    <h1>Support</h1>
+    <p class="subtitle">We're here to help.</p>
+
+    <h2>Contact</h2>
+    <div class="contact-card">
+      <span class="label">Email</span>
+      <!-- Replace with a real monitored address -->
+      <a href="mailto:support@aretay.com">support@aretay.com</a>
+      <span class="note">We aim to respond within 2 business days.</span>
+    </div>
+
+    <h2>Frequently Asked Questions</h2>
+    <div class="faq">
+
+      <details>
+        <summary>How does the learning work?</summary>
+        <div class="faq-body">
+          <p>Each course is a series of short 9:16 videos followed by multiple-choice questions. Your answers are graded and fed into the FSRS (Free Spaced Repetition Scheduler) algorithm, which schedules each card at the optimal moment for long-term retention.</p>
+          <p>When you open the app, any overdue cards are reviewed first, then new content picks up where you left off. Everything is saved immediately, so you can quit mid-session without losing progress.</p>
+        </div>
+      </details>
+
+      <details>
+        <summary>What is a "level"?</summary>
+        <div class="faq-body">
+          <p>Your level (Explorer → Scholar → Expert → Master) reflects how many cards have reached long-term memory — a stable FSRS state with a review interval of 21 days or more. It is shown on your Profile and in the stat bar on the Home screen.</p>
+        </div>
+      </details>
+
+      <details>
+        <summary>What does my streak count?</summary>
+        <div class="faq-body">
+          <p>Your day streak counts consecutive calendar days on which you reviewed at least one card. It resets if a full calendar day passes with no review activity.</p>
+        </div>
+      </details>
+
+      <details>
+        <summary>My video won't load. What should I try?</summary>
+        <div class="faq-body">
+          <p>Video streams from Cloudflare's CDN. Check that you have an active internet connection and try closing and reopening the session. If the issue persists, email us with the course name and which lesson you were on.</p>
+        </div>
+      </details>
+
+      <details>
+        <summary>How do I delete my account?</summary>
+        <div class="faq-body">
+          <p>Open the app → tap your avatar in the top-right of the Home screen → tap <strong>Delete Account</strong> → confirm. This permanently removes your account and all study data immediately. There is no grace period and no undo.</p>
+          <p>You can also email us at <a href="mailto:support@aretay.com">support@aretay.com</a> and we will delete your account manually within 5 business days.</p>
+        </div>
+      </details>
+
+      <details>
+        <summary>Can I restore my progress after deleting and reinstalling?</summary>
+        <div class="faq-body">
+          <p>Yes — as long as your account was not deleted. Your progress is stored on our servers and syncs automatically when you sign back in with the same Apple ID.</p>
+        </div>
+      </details>
+
+      <details>
+        <summary>Sign in with Apple isn't working.</summary>
+        <div class="faq-body">
+          <p>Make sure you are signed into iCloud in your iPhone Settings with a real Apple ID (not a simulator). If you recently changed your Apple ID settings, try signing out and back into iCloud. Still stuck? Email us with a description of the error you see.</p>
+        </div>
+      </details>
+
+      <details>
+        <summary>I found a bug or want to suggest a feature.</summary>
+        <div class="faq-body">
+          <p>Email us at <a href="mailto:support@aretay.com">support@aretay.com</a> with "Bug:" or "Feature:" in the subject line. For bugs, include which course/lesson triggered it and a brief description of what you expected vs. what happened.</p>
+        </div>
+      </details>
+
+    </div>
+  </div>
+
+  <footer>
+    <span>© 2026 Aretay</span>
+    <span class="footer-sep">·</span>
+    <a href="index.html">Home</a>
+    <span class="footer-sep">·</span>
+    <a href="privacy.html">Privacy Policy</a>
+  </footer>
+</body>
+</html>

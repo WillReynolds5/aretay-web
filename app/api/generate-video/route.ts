@@ -6,7 +6,7 @@ import {
 } from "@/lib/cards";
 import { SEEDANCE_USD_PER_VIDEO_SECOND, VIDEO_DURATION_SECONDS } from "@/lib/production";
 import { fetchOutputBuffer, getReplicate } from "@/lib/replicate";
-import { getVideoUrl, segmentVideoKey, uploadVideo } from "@/lib/r2";
+import { getVideoUrl, segmentVideoKey, uploadObject } from "@/lib/r2";
 
 export const maxDuration = 300;
 
@@ -71,7 +71,7 @@ export async function POST(req: NextRequest) {
 
     const videoBuffer = await fetchOutputBuffer(output);
     const r2Key = segmentVideoKey(courseId, segmentKey);
-    await uploadVideo(r2Key, videoBuffer);
+    await uploadObject(r2Key, videoBuffer, "video/mp4");
     await updateCardForSegment(courseId, segmentKey, { video_r2_key: r2Key, captions: null });
     const costs = await addProductionCost(courseId, segmentKey, "video", spentUsd);
     const url = await getVideoUrl(r2Key);

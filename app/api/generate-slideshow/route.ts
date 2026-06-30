@@ -11,7 +11,7 @@ import {
   getVideoUrl,
   resolveMediaUrl,
   segmentVideoKey,
-  uploadVideo,
+  uploadObject,
 } from "@/lib/r2";
 import { getSupabaseAdmin } from "@/lib/supabase-admin";
 
@@ -89,7 +89,7 @@ export async function POST(req: NextRequest) {
 
     const videoBuffer = buildSlideshowVideo(frames, audioBuffer);
     const r2Key = segmentVideoKey(courseId, segmentKey);
-    await uploadVideo(r2Key, videoBuffer);
+    await uploadObject(r2Key, videoBuffer, "video/mp4");
     // Same shape as the Seedance path: set the video key + clear stale captions.
     await updateCardForSegment(courseId, segmentKey, { video_r2_key: r2Key, captions: null });
     const costs = await addProductionCost(courseId, segmentKey, "video", spentUsd);

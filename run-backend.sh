@@ -170,7 +170,7 @@ cmd_voice_dev() {
   printf "  1. Paste the SUPABASE_URL + SUPABASE_ANON_KEY above into aretay-ios/Config/Secrets.xcconfig\n"
   printf "     (prod URL won't have the new tables/functions until you deploy there)\n"
   printf "  2. Set LIVE_VOICE_REVIEW = 1 in Secrets.xcconfig (already on if you followed setup)\n"
-  printf "  3. Run admin: ./aretay-admin/run-admin.sh — generate-review-asset on a question\n"
+  printf "  3. In another terminal: ./run-admin.sh — generate lesson assets from /admin\n"
   printf "  4. In another terminal: ./run-backend.sh serve-functions\n"
   printf "  5. xcodegen + run on a ${B}real device${N} (mic required)\n\n"
   cmd_serve_functions

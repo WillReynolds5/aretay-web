@@ -56,10 +56,6 @@ export async function uploadObject(key: string, body: Buffer, contentType: strin
   );
 }
 
-export async function uploadVideo(key: string, body: Buffer) {
-  await uploadObject(key, body, "video/mp4");
-}
-
 export async function objectExists(key: string): Promise<boolean> {
   const { bucket } = getR2Config();
   const client = getClient();

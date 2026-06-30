@@ -1,4 +1,5 @@
 import { COURSE_TAG_SLUGS, MAX_COURSE_TAGS } from "./tags";
+import { parseJsonResponse } from "./llm";
 
 export function buildCurriculumPrompt(subject: string) {
   return `# ROLE
@@ -272,14 +273,8 @@ export function parseCurriculumJson(raw: string): unknown {
     throw new Error("Model returned an empty response — try again");
   }
 
-  const fenceMatch = trimmed.match(/```(?:json)?\s*([\s\S]*?)```/);
-  const jsonText = fenceMatch ? fenceMatch[1].trim() : trimmed;
-  if (!jsonText) {
-    throw new Error("Model response had no JSON content — try again");
-  }
-
   try {
-    return JSON.parse(jsonText);
+    return parseJsonResponse(trimmed);
   } catch {
     throw new Error("Model returned malformed JSON — response may have been cut off. Try again.");
   }

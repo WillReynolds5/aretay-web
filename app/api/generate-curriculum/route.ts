@@ -1,5 +1,4 @@
 import { NextRequest, NextResponse } from "next/server";
-import { OpenRouter } from "@openrouter/sdk";
 import {
   buildCurriculumFromCardsPrompt,
   buildCurriculumPrompt,
@@ -14,35 +13,11 @@ import {
   isCurriculumModel,
   isFusionCurriculumModel,
 } from "@/lib/curriculum-models";
+import { extractContent, getOpenRouter } from "@/lib/llm";
 
 export const maxDuration = 300;
 
-function extractContent(result: unknown): string {
-  if (!result || typeof result !== "object") return "";
-
-  const choices = (result as { choices?: unknown[] }).choices;
-  const first = choices?.[0];
-  if (!first || typeof first !== "object") return "";
-
-  const message = (first as { message?: { content?: unknown } }).message;
-  const content = message?.content;
-
-  if (typeof content === "string") return content;
-  if (Array.isArray(content)) {
-    return content
-      .map(part => (typeof part === "object" && part && "text" in part ? String(part.text) : ""))
-      .join("");
-  }
-
-  return "";
-}
-
 export async function POST(req: NextRequest) {
-  const apiKey = process.env.OPENROUTER_API_KEY;
-  if (!apiKey) {
-    return NextResponse.json({ error: "OPENROUTER_API_KEY not configured" }, { status: 500 });
-  }
-
   const body = await req.json();
   const name = typeof body.name === "string" ? body.name.trim() : "";
   const mode = body.mode === "cards" ? "cards" : "scratch";
@@ -56,12 +31,12 @@ export async function POST(req: NextRequest) {
     return NextResponse.json({ error: "Paste cards before generating from cards" }, { status: 400 });
   }
 
-  const openrouter = new OpenRouter({ apiKey });
   const prompt = mode === "cards"
     ? buildCurriculumFromCardsPrompt(name, cardsText)
     : buildCurriculumPrompt(name);
 
   try {
+    const openrouter = getOpenRouter();
     const result = await openrouter.chat.send({
       chatRequest: {
         model,

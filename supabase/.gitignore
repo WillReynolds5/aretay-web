@@ -1,0 +1,4 @@
+# Local secrets for Edge Functions — never commit.
+.env
+functions/.env
+.env.local

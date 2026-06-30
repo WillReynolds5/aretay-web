@@ -1,0 +1,298 @@
+{
+  "courseId": "05b2c708-b810-4004-84b5-4c72e688051a",
+  "segmentKey": "L2-S1",
+  "duration": 5,
+  "trials": 3,
+  "variants": [
+    {
+      "name": "bland-control",
+      "prompt": "A slow cinematic tour of an ancient Mediterranean city at golden hour. The camera glides past sunlit marble columns, stone courtyards, and quiet streets with olive trees swaying in a gentle breeze. Warm haze, glowing dust particles, photorealistic, vertical 9:16, smooth camera movement, soft ambient score. No on-screen text, watermarks, or logos.",
+      "audio": false,
+      "image": false,
+      "tests": "sanity — should always pass"
+    },
+    {
+      "name": "control-full",
+      "prompt": "OVERVIEW:\nThis cinematic video illustrates the Roman Republic's atmospheric expansion into rugged terrain. Moving from Roman halls to stormy mountain peaks, the visual arc symbolizes shifting political power. The sequence ends with triumphant light breaking over a newly claimed landscape.\n\nSHOT LIST (this is the visual guide for the video — it is NOT spoken aloud):\n0:00–0:04 Open on the top-left reference panel. Camera pushes in on senators in togas studying a map in a dark marble hall, lit by dramatic cinematic shafts of light.\n0:04–0:08 Cut to the top-right reference panel. A slow pan across unarmed Samnite leaders on a cliff edge under storm clouds, displaying fierce expressions and a clenched fist.\n0:08–0:11 Cut to the bottom-left reference panel. Smooth sweeping flight over an ancient Roman road cutting through a foggy valley toward mountain peaks.\n0:11–0:15 Cut to the bottom-right reference panel. Camera circles a Roman magistrate in a red cloak atop a mountain as golden sunlight pierces the dark clouds.\n\nNARRATION (this exact text is the voiceover read in the provided reference audio file — do not alter it, and do not turn it into on-screen text):\n\"As the Republic stabilized, it expanded beyond central Italy. Rome fought intense wars against neighboring Samnite hill tribes. By 290 BCE, after decades of brutal fighting, Rome controlled the central Italian mountains.\"\n\nMusic: Swelling orchestral strings building from dark tension to a majestic climax.\nAmbience: Echoing hall acoustics fading into harsh mountain winds and distant rolling thunder.",
+      "audio": true,
+      "image": true,
+      "tests": "reproduces production (expected to flag)"
+    },
+    {
+      "name": "text-only",
+      "prompt": "OVERVIEW:\nThis cinematic video illustrates the Roman Republic's atmospheric expansion into rugged terrain. Moving from Roman halls to stormy mountain peaks, the visual arc symbolizes shifting political power. The sequence ends with triumphant light breaking over a newly claimed landscape.\n\nSHOT LIST (this is the visual guide for the video — it is NOT spoken aloud):\n0:00–0:04 Open on the top-left reference panel. Camera pushes in on senators in togas studying a map in a dark marble hall, lit by dramatic cinematic shafts of light.\n0:04–0:08 Cut to the top-right reference panel. A slow pan across unarmed Samnite leaders on a cliff edge under storm clouds, displaying fierce expressions and a clenched fist.\n0:08–0:11 Cut to the bottom-left reference panel. Smooth sweeping flight over an ancient Roman road cutting through a foggy valley toward mountain peaks.\n0:11–0:15 Cut to the bottom-right reference panel. Camera circles a Roman magistrate in a red cloak atop a mountain as golden sunlight pierces the dark clouds.\n\nNARRATION (this exact text is the voiceover read in the provided reference audio file — do not alter it, and do not turn it into on-screen text):\n\"As the Republic stabilized, it expanded beyond central Italy. Rome fought intense wars against neighboring Samnite hill tribes. By 290 BCE, after decades of brutal fighting, Rome controlled the central Italian mountains.\"\n\nMusic: Swelling orchestral strings building from dark tension to a majestic climax.\nAmbience: Echoing hall acoustics fading into harsh mountain winds and distant rolling thunder.",
+      "audio": false,
+      "image": false,
+      "tests": "is the prompt TEXT alone flagged?"
+    },
+    {
+      "name": "audio-ref-only",
+      "prompt": "A slow cinematic tour of an ancient Mediterranean city at golden hour. The camera glides past sunlit marble columns, stone courtyards, and quiet streets with olive trees swaying in a gentle breeze. Warm haze, glowing dust particles, photorealistic, vertical 9:16, smooth camera movement, soft ambient score. No on-screen text, watermarks, or logos.",
+      "audio": true,
+      "image": false,
+      "tests": "is the narration AUDIO flagged?"
+    },
+    {
+      "name": "image-ref-only",
+      "prompt": "A slow cinematic tour of an ancient Mediterranean city at golden hour. The camera glides past sunlit marble columns, stone courtyards, and quiet streets with olive trees swaying in a gentle breeze. Warm haze, glowing dust particles, photorealistic, vertical 9:16, smooth camera movement, soft ambient score. No on-screen text, watermarks, or logos.",
+      "audio": false,
+      "image": true,
+      "tests": "is the BOARD IMAGE flagged?"
+    },
+    {
+      "name": "no-narration-quote",
+      "prompt": "OVERVIEW:\nThis cinematic video illustrates the Roman Republic's atmospheric expansion into rugged terrain. Moving from Roman halls to stormy mountain peaks, the visual arc symbolizes shifting political power. The sequence ends with triumphant light breaking over a newly claimed landscape.\n\nSHOT LIST (this is the visual guide for the video — it is NOT spoken aloud):\n0:00–0:04 Open on the top-left reference panel. Camera pushes in on senators in togas studying a map in a dark marble hall, lit by dramatic cinematic shafts of light.\n0:04–0:08 Cut to the top-right reference panel. A slow pan across unarmed Samnite leaders on a cliff edge under storm clouds, displaying fierce expressions and a clenched fist.\n0:08–0:11 Cut to the bottom-left reference panel. Smooth sweeping flight over an ancient Roman road cutting through a foggy valley toward mountain peaks.\n0:11–0:15 Cut to the bottom-right reference panel. Camera circles a Roman magistrate in a red cloak atop a mountain as golden sunlight pierces the dark clouds.\n\nNARRATION (this exact text is the voiceover read in the provided reference audio file — do not alter it, and do not turn it into on-screen text):\n\"(narration provided via the reference audio file)\"\n\nMusic: Swelling orchestral strings building from dark tension to a majestic climax.\nAmbience: Echoing hall acoustics fading into harsh mountain winds and distant rolling thunder.",
+      "audio": true,
+      "image": true,
+      "tests": "does removing the quoted script text fix it?"
+    },
+    {
+      "name": "sanitized-words",
+      "prompt": "OVERVIEW:\nThis cinematic video illustrates the Roman Republic's atmospheric expansion into rugged terrain. Moving from Roman halls to stormy mountain peaks, the visual arc symbolizes shifting political power. The sequence ends with triumphant light breaking over a newly claimed landscape.\n\nSHOT LIST (this is the visual guide for the video — it is NOT spoken aloud):\n0:00–0:04 Open on the top-left reference panel. Camera pushes in on senators in togas studying a map in a dark marble hall, lit by dramatic cinematic shafts of light.\n0:04–0:08 Cut to the top-right reference panel. A slow pan across Samnite leaders on a cliff edge under storm clouds, displaying fierce expressions and a clenched fist.\n0:08–0:11 Cut to the bottom-left reference panel. Smooth sweeping flight over an ancient Roman road cutting through a foggy valley tocampaignd mountain peaks.\n0:11–0:15 Cut to the bottom-right reference panel. Camera circles a Roman magistrate in a red cloak atop a mountain as golden sunlight pierces the dark clouds.\n\nNARRATION (this exact text is the voiceover read in the provided reference audio file — do not alter it, and do not turn it into on-screen text):\n\"As the Republic stabilized, it expanded beyond central Italy. Rome contended long campaigns against neighboring Samnite hill tribes. By 290 BCE, after decades of a hard-contended struggle, Rome controlled the central Italian mountains.\"\n\nMusic: Swelling orchestral strings building from dark tension to a majestic climax.\nAmbience: Echoing hall acoustics fading into harsh mountain winds and distant rolling thunder.",
+      "audio": true,
+      "image": true,
+      "tests": "does replacing war/violence vocabulary fix it?"
+    },
+    {
+      "name": "narration-text-only",
+      "prompt": "A cinematic historical scene. Narration: \"As the Republic stabilized, it expanded beyond central Italy. Rome fought intense wars against neighboring Samnite hill tribes. By 290 BCE, after decades of brutal fighting, Rome controlled the central Italian mountains.\"",
+      "audio": false,
+      "image": false,
+      "tests": "is the SCRIPT text itself the trigger?"
+    }
+  ],
+  "results": [
+    {
+      "variant": "bland-control",
+      "trial": 1,
+      "result": "PASS",
+      "seconds": 164
+    },
+    {
+      "variant": "control-full",
+      "trial": 1,
+      "result": "FLAGGED",
+      "detail": "Prediction failed: Prediction failed: Async prediction failed: ModelError: The input or output was flagged as sensitive. Please try again with different inputs. (E005) (uIJ6l3ruRD)",
+      "seconds": 12
+    },
+    {
+      "variant": "control-full",
+      "trial": 2,
+      "result": "FLAGGED",
+      "detail": "Prediction failed: Prediction failed: Async prediction failed: ModelError: The input or output was flagged as sensitive. Please try again with different inputs. (E005) (uIJ6l3ruRD)",
+      "seconds": 11
+    },
+    {
+      "variant": "control-full",
+      "trial": 3,
+      "result": "FLAGGED",
+      "detail": "Prediction failed: Prediction failed: Async prediction failed: ModelError: The input or output was flagged as sensitive. Please try again with different inputs. (E005) (uIJ6l3ruRD)",
+      "seconds": 13
+    },
+    {
+      "variant": "bland-control",
+      "trial": 3,
+      "result": "PASS",
+      "seconds": 317
+    },
+    {
+      "variant": "bland-control",
+      "trial": 2,
+      "result": "PASS",
+      "seconds": 359
+    },
+    {
+      "variant": "text-only",
+      "trial": 1,
+      "result": "PASS",
+      "seconds": 163
+    },
+    {
+      "variant": "audio-ref-only",
+      "trial": 1,
+      "result": "ERROR",
+      "detail": "Prediction failed: Prediction failed: Async prediction failed: ModelError: The input was invalid. Please try again with different inputs. (E006) (uIJ6l3ruRD): Reference audio requires at least one reference image or video.",
+      "seconds": 1
+    },
+    {
+      "variant": "audio-ref-only",
+      "trial": 2,
+      "result": "ERROR",
+      "detail": "Prediction failed: Prediction failed: Async prediction failed: ModelError: The input was invalid. Please try again with different inputs. (E006) (uIJ6l3ruRD): Reference audio requires at least one reference image or video.",
+      "seconds": 1
+    },
+    {
+      "variant": "audio-ref-only",
+      "trial": 3,
+      "result": "ERROR",
+      "detail": "Prediction failed: Prediction failed: Async prediction failed: ModelError: The input was invalid. Please try again with different inputs. (E006) (uIJ6l3ruRD): Reference audio requires at least one reference image or video.",
+      "seconds": 1
+    },
+    {
+      "variant": "image-ref-only",
+      "trial": 1,
+      "result": "FLAGGED",
+      "detail": "Prediction failed: Prediction failed: Async prediction failed: ModelError: The input or output was flagged as sensitive. Please try again with different inputs. (E005) (uIJ6l3ruRD)",
+      "seconds": 4
+    },
+    {
+      "variant": "image-ref-only",
+      "trial": 2,
+      "result": "FLAGGED",
+      "detail": "Prediction failed: Prediction failed: Async prediction failed: ModelError: The input or output was flagged as sensitive. Please try again with different inputs. (E005) (uIJ6l3ruRD)",
+      "seconds": 5
+    },
+    {
+      "variant": "image-ref-only",
+      "trial": 3,
+      "result": "FLAGGED",
+      "detail": "Prediction failed: Prediction failed: Async prediction failed: ModelError: The input or output was flagged as sensitive. Please try again with different inputs. (E005) (uIJ6l3ruRD)",
+      "seconds": 5
+    },
+    {
+      "variant": "no-narration-quote",
+      "trial": 1,
+      "result": "FLAGGED",
+      "detail": "Prediction failed: Prediction failed: Async prediction failed: ModelError: The input or output was flagged as sensitive. Please try again with different inputs. (E005) (uIJ6l3ruRD)",
+      "seconds": 13
+    },
+    {
+      "variant": "no-narration-quote",
+      "trial": 2,
+      "result": "FLAGGED",
+      "detail": "Prediction failed: Prediction failed: Async prediction failed: ModelError: The input or output was flagged as sensitive. Please try again with different inputs. (E005) (uIJ6l3ruRD)",
+      "seconds": 13
+    },
+    {
+      "variant": "text-only",
+      "trial": 2,
+      "result": "PASS",
+      "seconds": 318
+    },
+    {
+      "variant": "sanitized-words",
+      "trial": 1,
+      "result": "FLAGGED",
+      "detail": "Prediction failed: Prediction failed: Async prediction failed: ModelError: The input or output was flagged as sensitive. Please try again with different inputs. (E005) (uIJ6l3ruRD)",
+      "seconds": 13
+    },
+    {
+      "variant": "sanitized-words",
+      "trial": 2,
+      "result": "FLAGGED",
+      "detail": "Prediction failed: Prediction failed: Async prediction failed: ModelError: The input or output was flagged as sensitive. Please try again with different inputs. (E005) (uIJ6l3ruRD)",
+      "seconds": 11
+    },
+    {
+      "variant": "sanitized-words",
+      "trial": 3,
+      "result": "FLAGGED",
+      "detail": "Prediction failed: Prediction failed: Async prediction failed: ModelError: The input or output was flagged as sensitive. Please try again with different inputs. (E005) (uIJ6l3ruRD)",
+      "seconds": 12
+    },
+    {
+      "variant": "text-only",
+      "trial": 3,
+      "result": "PASS",
+      "seconds": 402
+    },
+    {
+      "variant": "narration-text-only",
+      "trial": 2,
+      "result": "PASS",
+      "seconds": 167
+    },
+    {
+      "variant": "no-narration-quote",
+      "trial": 3,
+      "result": "PASS",
+      "seconds": 531
+    },
+    {
+      "variant": "narration-text-only",
+      "trial": 3,
+      "result": "PASS",
+      "seconds": 124
+    },
+    {
+      "variant": "narration-text-only",
+      "trial": 1,
+      "result": "PASS",
+      "seconds": 415
+    }
+  ],
+  "summary": [
+    {
+      "name": "bland-control",
+      "tests": "sanity — should always pass",
+      "trials": 3,
+      "passed": 3,
+      "flagged": 0,
+      "errored": 0,
+      "flagRate": 0
+    },
+    {
+      "name": "control-full",
+      "tests": "reproduces production (expected to flag)",
+      "trials": 3,
+      "passed": 0,
+      "flagged": 3,
+      "errored": 0,
+      "flagRate": 1
+    },
+    {
+      "name": "text-only",
+      "tests": "is the prompt TEXT alone flagged?",
+      "trials": 3,
+      "passed": 3,
+      "flagged": 0,
+      "errored": 0,
+      "flagRate": 0
+    },
+    {
+      "name": "audio-ref-only",
+      "tests": "is the narration AUDIO flagged?",
+      "trials": 3,
+      "passed": 0,
+      "flagged": 0,
+      "errored": 3,
+      "flagRate": 0
+    },
+    {
+      "name": "image-ref-only",
+      "tests": "is the BOARD IMAGE flagged?",
+      "trials": 3,
+      "passed": 0,
+      "flagged": 3,
+      "errored": 0,
+      "flagRate": 1
+    },
+    {
+      "name": "no-narration-quote",
+      "tests": "does removing the quoted script text fix it?",
+      "trials": 3,
+      "passed": 1,
+      "flagged": 2,
+      "errored": 0,
+      "flagRate": 0.6666666666666666
+    },
+    {
+      "name": "sanitized-words",
+      "tests": "does replacing war/violence vocabulary fix it?",
+      "trials": 3,
+      "passed": 0,
+      "flagged": 3,
+      "errored": 0,
+      "flagRate": 1
+    },
+    {
+      "name": "narration-text-only",
+      "tests": "is the SCRIPT text itself the trigger?",
+      "trials": 3,
+      "passed": 3,
+      "flagged": 0,
+      "errored": 0,
+      "flagRate": 0
+    }
+  ]
+}

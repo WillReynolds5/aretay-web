@@ -1,0 +1,63 @@
+{
+  "images": [
+    {
+      "name": "face-closeup",
+      "key": "aretay/experiments/face-test-face-closeup.png",
+      "tests": "prominent photorealistic faces",
+      "prompt": "A 2x2 grid of labeled reference panels. Cinematic, photorealistic, ancient Roman historical epic, warm golden hour amber tones, dramatic directional lighting, highly detailed, 8k. Each panel is a close-up portrait of a different Roman senator in a white toga — faces large, sharply detailed, filling most of each frame, varied ages and expressions, marble interiors behind them. Text label at the bottom of each panel: 'SENATOR I', 'SENATOR II', 'SENATOR III', 'SENATOR IV'."
+    },
+    {
+      "name": "distant-people",
+      "key": "aretay/experiments/face-test-distant-people.png",
+      "tests": "people present but small/indistinct",
+      "prompt": "A 2x2 grid of labeled reference panels. Cinematic, photorealistic, ancient Roman historical epic, warm golden hour amber tones, dramatic directional lighting, highly detailed, 8k. Top-left labeled 'FORUM': a wide shot of the Roman forum with a crowd of toga-clad figures seen from far away, faces indistinct. Top-right labeled 'PROCESSION': a distant procession walking a stone road through a valley, figures tiny against the landscape. Bottom-left labeled 'HARBOR': a busy ancient harbor seen from a cliff, people like specks among ships. Bottom-right labeled 'AMPHITHEATER': a vast amphitheater with a distant seated crowd."
+    },
+    {
+      "name": "no-people",
+      "key": "aretay/experiments/face-test-no-people.png",
+      "tests": "architecture/landscape only",
+      "prompt": "A 2x2 grid of labeled reference panels. Cinematic, photorealistic, ancient Roman historical epic, warm golden hour amber tones, dramatic directional lighting, highly detailed, 8k. Top-left labeled 'TEMPLE': a marble temple with tall columns in morning light. Top-right labeled 'ROAD': an empty Roman stone road stretching across a misty valley. Bottom-left labeled 'FORUM': empty forum plaza with long shadows at dawn. Bottom-right labeled 'COAST': a rugged Mediterranean coastline with cypress trees, no people anywhere."
+    }
+  ],
+  "results": [
+    {
+      "image": "face-closeup",
+      "trial": 1,
+      "result": "FLAGGED",
+      "detail": "Prediction failed: Prediction failed: Async prediction failed: ModelError: The input or output was flagged as sensitive. Please try again with different inputs. (E005) (uIJ6l3ruRD)",
+      "seconds": 6
+    },
+    {
+      "image": "face-closeup",
+      "trial": 2,
+      "result": "FLAGGED",
+      "detail": "Prediction failed: Prediction failed: Async prediction failed: ModelError: The input or output was flagged as sensitive. Please try again with different inputs. (E005) (uIJ6l3ruRD)",
+      "seconds": 7
+    },
+    {
+      "image": "distant-people",
+      "trial": 1,
+      "result": "PASS",
+      "seconds": 113
+    },
+    {
+      "image": "distant-people",
+      "trial": 2,
+      "result": "PASS",
+      "seconds": 126
+    },
+    {
+      "image": "no-people",
+      "trial": 1,
+      "result": "FLAGGED",
+      "detail": "Prediction failed: Prediction failed: Async prediction failed: ModelError: The input or output was flagged as sensitive. Please try again with different inputs. (E005) (uIJ6l3ruRD): request ID: cgt-20260610102239-x4wxg",
+      "seconds": 148
+    },
+    {
+      "image": "no-people",
+      "trial": 2,
+      "result": "PASS",
+      "seconds": 125
+    }
+  ]
+}

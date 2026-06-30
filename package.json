@@ -1,0 +1,41 @@
+{
+  "name": "aretay-admin",
+  "version": "0.1.0",
+  "private": true,
+  "scripts": {
+    "dev": "next dev",
+    "build": "next build",
+    "start": "next start",
+    "lint": "eslint",
+    "studio": "remotion studio remotion/index.ts",
+    "render": "remotion render remotion/index.ts CourseVideo",
+    "experiment": "node --env-file=.env.local scripts/flag-experiment.mjs",
+    "refresh-covers": "node --env-file=.env.local scripts/refresh-cover-urls.mjs"
+  },
+  "dependencies": {
+    "@aws-sdk/client-s3": "^3.1063.0",
+    "@aws-sdk/s3-request-presigner": "^3.1063.0",
+    "@openrouter/sdk": "^0.12.79",
+    "@remotion/captions": "4.0.473",
+    "@remotion/cli": "^4.0.473",
+    "@remotion/install-whisper-cpp": "4.0.473",
+    "@remotion/media-utils": "4.0.473",
+    "@remotion/player": "^4.0.473",
+    "@supabase/supabase-js": "^2.107.0",
+    "next": "16.2.7",
+    "react": "19.2.4",
+    "react-dom": "19.2.4",
+    "remotion": "^4.0.473",
+    "replicate": "^1.4.0"
+  },
+  "devDependencies": {
+    "@tailwindcss/postcss": "^4",
+    "@types/node": "^20",
+    "@types/react": "^19",
+    "@types/react-dom": "^19",
+    "eslint": "^9",
+    "eslint-config-next": "16.2.7",
+    "tailwindcss": "^4",
+    "typescript": "^5"
+  }
+}
